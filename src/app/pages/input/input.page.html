@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Input</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<!--Input Default-->
+<ion-input></ion-input>
+
+<!--input com valor-->
+<ion-input value="1234"></ion-input>
+
+<!--Input com placeholder-->
+<ion-input type="text" placeholder="Informe seu nome"></ion-input>
+
+<!--Input com icone de limpar-->
+<ion-input clearInput placeholder="curso ionic 5"></ion-input>
+
+<!--input com valor numerico-->
+<ion-input clearInput type="number" value="1234"></ion-input>
+
+<!--Input email-->
+<ion-input type="email" placeholder="Informe seu e-mail"></ion-input>
+
+<!--Input telefone-->
+<ion-input type="tel" placeholder="Informe seu telefone"></ion-input>
+
+<!--Input  url-->
+<ion-input type="url" placeholder="Informe a url"></ion-input>
+
+<!--Input search-->
+<ion-input type="search" placeholder="Search"></ion-input>
+
+<!--Input password-->
+<ion-input type="password" placeholder="Informe sua senha"></ion-input>
+
+<ion-item>
+  <ion-label>Sem position</ion-label>
+  <ion-input type="text" placeholder="informe primeiro nome"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Floating</ion-label>
+  <ion-input type="text"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="fixed">Fixed</ion-label>
+  <ion-input type="text"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="stacked">Informe a nota</ion-label>
+  <ion-input type="text" placeholder="Informe de 1 a 5"></ion-input>
+</ion-item>
+
+<!--Input color-->
+<ion-input type="text" color="danger" placeholder="Informe seu nome"></ion-input>
+
+</ion-content>

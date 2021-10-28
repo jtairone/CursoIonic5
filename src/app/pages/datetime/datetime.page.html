@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>DateTime</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<ion-item>
+  <ion-label>
+    Data Default
+  </ion-label>
+  <ion-datetime></ion-datetime>
+</ion-item>
+
+<ion-item>
+  <ion-label>
+    Data Default+Nome Mes
+  </ion-label>
+  <ion-datetime monthShortNames='{{nomesMesmin}}' doneText="Ok" cancelText="Cancelar"></ion-datetime>
+</ion-item>
+
+<ion-item>
+  <ion-label>
+    Data Default+Nome completo Mes
+  </ion-label>
+  <ion-datetime displayFormat="DD/MMMM/YYYY" pickerFormat="DD MMMM YYYY" monthNames='{{nomesMes}}' doneText="Ok" cancelText="Cancelar"></ion-datetime>
+</ion-item>
+
+<ion-item>
+  <ion-label>
+    DisplayFormat
+  </ion-label>
+  <ion-datetime displayFormat="DD/MM/YYYY"></ion-datetime>
+</ion-item>
+
+<ion-item>
+  <ion-label>
+    Display+Picker
+  </ion-label>
+  <ion-datetime displayFormat="MM/YYYY" pickerFormat="MMMM YYYY"></ion-datetime>
+</ion-item>
+
+<ion-item>
+  <ion-label>
+    Max-Min
+  </ion-label>
+  <ion-datetime displayFormat="MMMM YYYY" min="2016" max="2021"></ion-datetime>
+</ion-item>
+
+<ion-item>
+  <ion-label>DDD. MMM DD, YY (custom locale)</ion-label>
+  <ion-datetime
+    [dayShortNames]="dayNames"
+    displayFormat="DDD. MMM DD, YYYY"
+    monthShortNames="{{nomesMesmin}}" doneText="Ok" cancelText="Cancelar"></ion-datetime>
+</ion-item>
+
+</ion-content>
