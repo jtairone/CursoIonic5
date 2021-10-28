@@ -8,5 +8,8 @@
   </ion-header>
 
 <ion-content>
-
+  <ion-button expand="block" (click)="tirarFoto()">TIRAR FOTO</ion-button>
+  <ion-card [hidden]="!foto">
+    <img src="{{foto}}">
+  </ion-card>
 </ion-content>
