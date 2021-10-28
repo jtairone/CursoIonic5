@@ -134,6 +134,10 @@ const routes: Routes = [
   {
     path: 'componentes-nativos',
     loadChildren: () => import('./pages/componentes-nativos/componentes-nativos.module').then( m => m.ComponentesNativosPageModule)
+  },
+  {
+    path: 'camera',
+    loadChildren: () => import('./pages/camera/camera.module').then( m => m.CameraPageModule)
   }
 ];
 

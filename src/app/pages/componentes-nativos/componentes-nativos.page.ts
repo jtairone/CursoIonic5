@@ -14,6 +14,5 @@ export class ComponentesNativosPage implements OnInit {
   }
   showPage(url){
     this.navCtrl.navigateForward(url);
-
   }
 }
