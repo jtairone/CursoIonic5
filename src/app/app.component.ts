@@ -9,6 +9,8 @@ export class AppComponent {
   public appPages = [
     { title: 'Componentes Visuais', url: 'componentes-visuais', icon: 'construct' },
     { title: 'Componentes Nativos', url: 'componentes-nativos', icon: 'construct' },
+    { title: 'API Externa', url: 'api', icon: 'construct' },
+    { title: 'API Externa AP', url: 'apiaco', icon: 'construct' },
    /* { title: 'Navegação', url: 'navegacao', icon: 'paper-plane' },
     { title: 'Botões', url: 'botao', icon: 'construct' },
     { title: 'Alert', url: 'alert', icon: 'construct' },

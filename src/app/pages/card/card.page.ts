@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardPage implements OnInit {
 
+  cor: any = 'success';
   constructor() { }
 
   ngOnInit() {
+  }
+  clicarCard(){
+    alert('Ação Clique no card, Mudar Cor para Verde!!');
+    this.cor = 'danger';
+
   }
 
 }

@@ -24,8 +24,11 @@
     "@capacitor/haptics": "1.1.2",
     "@capacitor/keyboard": "1.1.2",
     "@capacitor/status-bar": "1.0.5",
+    "@ionic-native/barcode-scanner": "^5.36.0",
     "@ionic-native/camera": "^5.36.0",
     "@ionic-native/core": "^5.36.0",
+    "@ionic-native/http": "^4.20.0",
+    "@ionic-native/text-to-speech": "^5.36.0",
     "@ionic/angular": "^5.5.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
@@ -43,6 +46,7 @@
     "@angular/language-service": "~12.0.1",
     "@capacitor/cli": "3.2.5",
     "@ionic/angular-toolkit": "^4.0.0",
+    "@ionic/lab": "3.2.10",
     "@types/jasmine": "~3.6.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
@@ -50,13 +54,16 @@
     "@typescript-eslint/parser": "4.16.1",
     "cordova-android": "^10.0.0",
     "cordova-browser": "^6.0.0",
+    "cordova-plugin-advanced-http": "^3.2.2",
     "cordova-plugin-androidx": "^3.0.0",
     "cordova-plugin-camera": "^6.0.0",
     "cordova-plugin-device": "^2.0.2",
+    "cordova-plugin-file": "^6.0.2",
     "cordova-plugin-ionic-keyboard": "^2.2.0",
     "cordova-plugin-ionic-webview": "^5.0.0",
     "cordova-plugin-splashscreen": "^5.0.2",
     "cordova-plugin-statusbar": "^2.4.2",
+    "cordova-plugin-tts": "^0.2.3",
     "eslint": "^7.6.0",
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-jsdoc": "30.7.6",
@@ -69,6 +76,7 @@
     "karma-coverage-istanbul-reporter": "~3.0.2",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "phonegap-plugin-barcodescanner": "^8.1.0",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "typescript": "~4.2.4"
@@ -84,6 +92,13 @@
       "cordova-plugin-androidx": {},
       "cordova-plugin-camera": {
         "ANDROIDX_CORE_VERSION": "1.6.+"
+      },
+      "cordova-plugin-tts": {},
+      "phonegap-plugin-barcodescanner": {
+        "ANDROID_SUPPORT_V4_VERSION": "27.+"
+      },
+      "cordova-plugin-advanced-http": {
+        "ANDROIDBLACKLISTSECURESOCKETPROTOCOLS": "SSLv3,TLSv1"
       }
     },
     "platforms": [

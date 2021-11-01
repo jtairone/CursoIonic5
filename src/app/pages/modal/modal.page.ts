@@ -9,7 +9,7 @@ import { ModalInternoComponent } from 'src/app/componentes/modal-interno/modal-i
 })
 export class ModalPage implements OnInit {
 
-  constructor(private modalCtrl : ModalController) { }
+  constructor(private modalCtrl: ModalController) { }
 
   ngOnInit() {
   }

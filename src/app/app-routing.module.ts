@@ -138,6 +138,22 @@ const routes: Routes = [
   {
     path: 'camera',
     loadChildren: () => import('./pages/camera/camera.module').then( m => m.CameraPageModule)
+  },
+  {
+    path: 'texttospeech',
+    loadChildren: () => import('./pages/texttospeech/texttospeech.module').then( m => m.TexttospeechPageModule)
+  },
+  {
+    path: 'barcodscanner',
+    loadChildren: () => import('./pages/barcodscanner/barcodscanner.module').then( m => m.BarcodscannerPageModule)
+  },
+  {
+    path: 'api',
+    loadChildren: () => import('./pages/api/api.module').then( m => m.ApiPageModule)
+  },
+  {
+    path: 'apiaco',
+    loadChildren: () => import('./pages/apiaco/apiaco.module').then( m => m.ApiacoPageModule)
   }
 ];
 

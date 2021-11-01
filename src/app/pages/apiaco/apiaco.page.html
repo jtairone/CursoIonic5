@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>API Externa AP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-list>
+    <ion-item>
+      <ion-label>Filial</ion-label>
+      <ion-select placeholder="Selecione" interface="popover" [(ngModel)]="filial" (ionChange)="consultar()">
+        <ion-select-option value="1">1</ion-select-option>
+        <ion-select-option value="2">2</ion-select-option>
+      </ion-select>
+    </ion-item>
+</ion-list>
+<ion-refresher slot="fixed" (ionRefresh)="atualizar($event)">
+  <ion-refresher-content
+     pullingIcon="arrow-down"
+     pullingText="Puxe para Atualizar"
+     refreshingSpinner="circles"
+     refreshingText="Atualizando..."
+  >
+  </ion-refresher-content>
+</ion-refresher>
+<ion-item *ngFor="let item of retorno">
+
+  <ion-card color="success"  [hidden]="!retorno" (click)="clickCard(item.PEDIDO, item.CODFUNCSEP)">
+    <ion-card-header>
+      <ion-button expand="block" color="danger">Código e Cliente</ion-button>
+      <p>{{item.CODIGO}}  {{item.CLIENTE}}</p>
+      <ion-button expand="block" color="danger">Pedido   e   Data Pedido</ion-button>
+      <p>{{item.PEDIDO}}  || {{item.DATA}}</p>
+      <ion-button expand="block" color="danger">Valor Total</ion-button>
+      <p>R$ {{item.VLTOTAL}}</p>
+      <ion-button expand="block" color="danger" [hidden]="!item.CODFUNCSEP">Conferente</ion-button>
+      <p [hidden]="!item.CODFUNCSEP">{{item.CODFUNCSEP}} {{item.NOME_SEP}}</p>
+      <ion-button color="warning" [hidden]="item.CODFUNCSEP">Aguardando Conferencia</ion-button>
+      <ion-button color="dark" [hidden]="!item.CODFUNCSEP">SEPARADO</ion-button>
+    </ion-card-header>
+
+  </ion-card>
+</ion-item>
+</ion-content>

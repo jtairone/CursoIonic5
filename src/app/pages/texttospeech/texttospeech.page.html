@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Text to Speech</ion-title>
+  </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Texto a ser falado</ion-label>
+      <ion-input type="text" clearInput [(ngModel)]="textoASerFalado"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" >Velocidade</ion-label>
+      <ion-input type="number" clearInput [(ngModel)]="velocidade"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="full" (click)="falar()">Falar</ion-button>
+</ion-content>

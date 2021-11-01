@@ -15,4 +15,11 @@ export class ComponentesNativosPage implements OnInit {
   showPage(url){
     this.navCtrl.navigateForward(url);
   }
+  showPage2(url){
+    this.navCtrl.navigateForward(url);
+  }
+  showPage3(url){
+    this.navCtrl.navigateForward(url);
+  }
+
 }

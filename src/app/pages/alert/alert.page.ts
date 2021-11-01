@@ -9,7 +9,7 @@ import { async } from 'rxjs';
 })
 export class AlertPage implements OnInit {
 
-  constructor(private alertCtrl : AlertController) { }
+  constructor(private alertCtrl: AlertController) { }
 
   ngOnInit() {
   }

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.curso.app" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>CursoIonic5</name>
+    <name>Curso Ionic 5</name>
     <description>Curso Ionic 5 Udemy</description>
     <author email="jtaironemorais@hotmail.com" href="http://ionicframework.com/">Tazmania</author>
     <content src="index.html" />
