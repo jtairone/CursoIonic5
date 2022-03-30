@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComponentesNativosPage implements OnInit {
 
-  constructor(private navCtrl : NavController) { }
+  constructor(private navCtrl: NavController) { }
 
   ngOnInit() {
   }
@@ -19,6 +19,9 @@ export class ComponentesNativosPage implements OnInit {
     this.navCtrl.navigateForward(url);
   }
   showPage3(url){
+    this.navCtrl.navigateForward(url);
+  }
+  showPage4(url){
     this.navCtrl.navigateForward(url);
   }
 

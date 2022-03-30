@@ -28,7 +28,7 @@
 </ion-refresher>
 <ion-item *ngFor="let item of retorno">
 
-  <ion-card color="success"  [hidden]="!retorno" (click)="clickCard(item.PEDIDO, item.CODFUNCSEP)">
+  <ion-card color="success"  [hidden]="!retorno" (click)="clickCard(item)">
     <ion-card-header>
       <ion-button expand="block" color="danger">Código e Cliente</ion-button>
       <p>{{item.CODIGO}}  {{item.CLIENTE}}</p>

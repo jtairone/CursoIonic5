@@ -12,7 +12,7 @@ export class PedidoService {
 obterDadosPedido(f, token){
   const headers = new HttpHeaders().set('x-access-token', token);
   const url = 'http://localhost:21262/pedidos/'+f;
-  return this.http.get(url, {headers: headers}).toPromise();
+  return this.http.get(url, {headers}).toPromise();
 }
 
 updatePedido(p, s){

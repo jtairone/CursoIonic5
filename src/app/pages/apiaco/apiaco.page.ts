@@ -10,11 +10,10 @@ export class ApiacoPage implements OnInit {
 
   filial: any = '2';
   retorno: any;
-  confe = '158';
-  token: any;
+  confe = localStorage.getItem('coduser');
+  token: any = localStorage.getItem('token');
   constructor(private pedido: PedidoService) {
 
-     this.token = localStorage.getItem('token');
     this.pedido.obterDadosPedido(this.filial, this.token)
     .then((json)=>{
       this.retorno = json;
@@ -28,12 +27,12 @@ export class ApiacoPage implements OnInit {
   ngOnInit() {
 
   }
-  clickCard(p, s){
-    if(s){
+ clickCard(item){
+    if(item.CODFUNCSEP){
       alert('pedido já separado');
     }else{
-      this.pedido.updatePedido(p, this.confe)
-      .then((json)=>{
+      this.pedido.updatePedido(item.PEDIDO, this.confe)
+       .then((json)=>  {
           alert('Atualizado com sucesso');
       })
       .catch((erro)=>{
@@ -50,12 +49,10 @@ export class ApiacoPage implements OnInit {
   consultar(){
      this.pedido.obterDadosPedido(this.filial, this.token)
     .then((json)=>{
-      //console.log( json);
-       this.retorno = json;
+      this.retorno = json;
     })
     .catch((erro)=>{
       console.log(erro);
     });
   }
-
 }

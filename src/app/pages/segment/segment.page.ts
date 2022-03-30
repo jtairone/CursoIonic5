@@ -13,7 +13,6 @@ export class SegmentPage implements OnInit {
   ngOnInit() {
   }
   selecionar(e){
-   // console.log(e);
     this.opcaoSelecionada = e.detail.value;
   }
 }

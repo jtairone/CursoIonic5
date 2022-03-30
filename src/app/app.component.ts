@@ -11,6 +11,7 @@ export class AppComponent {
     { title: 'Componentes Nativos', url: 'componentes-nativos', icon: 'construct' },
     { title: 'API Externa', url: 'api', icon: 'construct' },
     { title: 'API Externa AP', url: 'apiaco', icon: 'construct' },
+    { title: 'Storage', url: 'storage', icon: 'save' },
    /* { title: 'Navegação', url: 'navegacao', icon: 'paper-plane' },
     { title: 'Botões', url: 'botao', icon: 'construct' },
     { title: 'Alert', url: 'alert', icon: 'construct' },
@@ -47,7 +48,7 @@ export class AppComponent {
     { title: 'Spam', url: '/folder/Spam', icon: 'warning' }, */
   ];
   //public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
-  constructor(private nav : NavController) {}
+  constructor(private nav: NavController) {}
 
   home(){
     this.nav.navigateForward('home');

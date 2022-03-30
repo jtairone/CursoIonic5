@@ -1,0 +1,11 @@
+<ion-content>
+    <ion-item>
+      <ion-label>Usuario</ion-label>
+      <ion-input type="text" name="user" [(ngModel)]="user"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Senha</ion-label>
+      <ion-input type="number" name="pass" [(ngModel)]="pass"></ion-input>
+    </ion-item>
+    <ion-button (click)="login()">Entrar</ion-button>
+</ion-content>

@@ -1,19 +1,26 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuardService } from './services/auth-guard.service';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule),
+    canActivate: [AuthGuardService]
   },
   {
     path: 'navegacao',
-    loadChildren: () => import('./pages/navegacao/navegacao.module').then( m => m.NavegacaoPageModule)
+    loadChildren: () => import('./pages/navegacao/navegacao.module').then( m => m.NavegacaoPageModule),
+    canActivate: [AuthGuardService]
   },
   {
     path: 'navegacao2',
@@ -144,16 +151,20 @@ const routes: Routes = [
     loadChildren: () => import('./pages/texttospeech/texttospeech.module').then( m => m.TexttospeechPageModule)
   },
   {
-    path: 'barcodscanner',
-    loadChildren: () => import('./pages/barcodscanner/barcodscanner.module').then( m => m.BarcodscannerPageModule)
-  },
-  {
     path: 'api',
     loadChildren: () => import('./pages/api/api.module').then( m => m.ApiPageModule)
   },
   {
     path: 'apiaco',
     loadChildren: () => import('./pages/apiaco/apiaco.module').then( m => m.ApiacoPageModule)
+  },
+  {
+    path: 'storage',
+    loadChildren: () => import('./pages/storage/storage.module').then( m => m.StoragePageModule)
+  },
+  {
+    path: 'qrscanner',
+    loadChildren: () => import('./pages/qrscanner/qrscanner.module').then( m => m.QrscannerPageModule)
   }
 ];
 
